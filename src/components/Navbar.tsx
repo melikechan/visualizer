@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggler";
 import MenuButton from "./MenuButton";
 import MobileMenu from "./MobileMenu";
 
-const NAV_ITEMS = ["about", "projects", "blog", "contact"];
+const NAV_ITEMS = ["algorithms", "data-structures", "about", "contact"];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,16 +15,7 @@ export default function Navbar() {
 
   return (
     <nav className="flex justify-between items-center py-4 w-full px-4">
-      <Link href="/">
-        <Image
-          src="/logo.svg"
-          alt="melikechan-logo"
-          width={64}
-          height={64}
-          priority
-        />
-        <Link href="/visualizer">visualizer</Link>
-      </Link>
+      <Link href="/">visualizer</Link>
       <div className="flex items-center space-x-4">
         <div className="lg:hidden">
           <MenuButton isOpen={menuOpen} toggleMenu={toggleMenu} />
@@ -37,7 +27,7 @@ export default function Navbar() {
           {NAV_ITEMS.map((item) => (
             <li key={item}>
               <Link href={`/${item}`} className="capitalize">
-                {item}
+                {item.replace("-", " ")}
               </Link>
             </li>
           ))}
