@@ -104,7 +104,7 @@ export default function InsertionSort() {
     const result = [...arr];
 
     for (let i = 1; i < result.length; i++) {
-      let elem = result[i];
+      const elem = result[i];
       let j = i - 1;
 
       while (j >= 0 && result[j] > elem) {
