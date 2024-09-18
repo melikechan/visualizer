@@ -134,8 +134,8 @@ export default function InsertionSort() {
     <main className="px-4 py-8 space-y-4">
       <h1 className="text-3xl lg:text-4xl text-center">Insertion Sort</h1>
 
-      <div className="flex flex-row justify-between px-4 h-screen">
-        <svg ref={svgRef} className="w-1/2"></svg>
+      <div className="flex flex-col md:flex-row justify-between px-4 h-screen">
+        <svg ref={svgRef} className="w-full"></svg>
         <div className="flex flex-col gap-4 items-center">
           <div className="grid w-full max-w-sm items-center gap-1.5">
             <Label htmlFor="array-size">Array Size</Label>
